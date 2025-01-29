@@ -1,19 +1,13 @@
 import "./App.css";
+import { useViewportSize } from "./useViewportSize.ts";
 
 function App() {
+  const { height, width } = useViewportSize();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      Width: {width}, height: {height}
+    </>
   );
 }
 
